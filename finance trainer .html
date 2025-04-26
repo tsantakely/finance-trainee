@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.4">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Finance Fundamentals Trainer&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>body { font-family: Arial, sans-serif; background: #f9f9ff; margin: 0; padding: 0; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>header { background: #4CAF50; color: white; padding: 1rem; text-align: center; font-size: 1.8rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>nav { display: flex; flex-wrap: wrap; background: #333; justify-content: center; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>nav button { background: #333; color: white; border: none; margin: 5px; padding: 10px 15px; font-size: 1rem; cursor: pointer; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>nav button:hover { background: #555; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>section { padding: 20px; max-width: 900px; margin: auto; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hidden { display: none; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.quiz button { margin: 5px 0; padding: 10px; width: 100%; font-size: 1rem; cursor: pointer; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.correct { background: #c8f7c5; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.incorrect { background: #f7c5c5; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>#confetti { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>#progress { text-align: center; margin: 10px; font-weight: bold; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>#certificate { display: none; background: white; padding: 2rem; margin: 2rem auto; text-align: center; border: 2px solid #4CAF50; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;canvas id="confetti"&gt;&lt;/canvas&gt;</p>
+<p class="p1">&lt;header&gt;Finance Fundamentals Trainer&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;nav&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;button onclick="showSection('module1')"&gt;Basics&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;button onclick="showSection('module2')"&gt;Statements&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;button onclick="showSection('module3')"&gt;Indicators&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;button onclick="showSection('module4')"&gt;DCF&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;button onclick="showSection('calculator')"&gt;DCF Calculator&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;button onclick="showSection('caseStudies')"&gt;Case Studies&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;button onclick="showSection('finalQuiz')"&gt;Final Quiz&lt;/button&gt;</p>
+<p class="p1">&lt;/nav&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div id="progress"&gt;Progress: 0%&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section id="module1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h2&gt;Module 1: Basics&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p&gt;Understand the key financial statements: P&amp;L, Balance Sheet, and Cash Flow.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="quiz"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;Which statement shows \"Assets = Liabilities + Equity\"?&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick="answer(this,true)"&gt;Balance Sheet&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick="answer(this,false)"&gt;Income Statement&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick="answer(this,false)"&gt;Cash Flow&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section id="module2" class="hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h2&gt;Module 2: Financial Statements&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p&gt;&lt;b&gt;Example Tesla:&lt;/b&gt; Assets $100B | Liabilities $70B | Equity $30B.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="quiz"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;What is an Asset?&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick="answer(this,true)"&gt;Cash&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick="answer(this,false)"&gt;Loan&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section id="module3" class="hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h2&gt;Module 3: Key Indicators&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p&gt;&lt;b&gt;EBIT:&lt;/b&gt; Earnings Before Interest and Taxes.&lt;br&gt;&lt;b&gt;EBITDA:&lt;/b&gt; EBIT plus Depreciation &amp; Amortization.&lt;br&gt;&lt;b&gt;FCF:&lt;/b&gt; Free Cash Flow = Cash after capital expenses.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="quiz"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;What does EBITDA add back?&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick="answer(this,true)"&gt;Depreciation &amp; Amortization&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick="answer(this,false)"&gt;Dividends&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section id="module4" class="hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h2&gt;Module 4: DCF&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p&gt;DCF (Discounted Cash Flow) values a company based on future cash flow estimates.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="quiz"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;Why discount cash flows?&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick="answer(this,true)"&gt;Time value of money&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick="answer(this,false)"&gt;Tax reasons&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section id="calculator" class="hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h2&gt;DCF Calculator&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p&gt;Enter values below to estimate the company's value:&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;input id="fcf" type="number" placeholder="Free Cash Flow (€)" style="width: 100%; padding: 8px; margin: 5px 0;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;input id="growth" type="number" placeholder="Growth Rate (%)" style="width: 100%; padding: 8px; margin: 5px 0;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;input id="discount" type="number" placeholder="Discount Rate (%)" style="width: 100%; padding: 8px; margin: 5px 0;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;button onclick="calculateDCF()" style="width:100%; padding:10px; margin-top:10px;"&gt;Calculate DCF Value&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h3 id="dcfResult"&gt;&lt;/h3&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section id="caseStudies" class="hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h2&gt;Case Studies&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h3&gt;Airbus&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p&gt;Revenue: €65B | EBIT: €5.3B | Equity: €25B&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h3&gt;L'Oréal&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p&gt;Revenue: €38B | EBITDA: €9B | Equity: €30B&lt;/p&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section id="finalQuiz" class="hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h2&gt;Final Quiz&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="quiz"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;1. FCF Formula?&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick="answer(this,true)"&gt;Operating Cash Flow - CapEx&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick="answer(this,false)"&gt;Net Income - Dividends&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;2. What shows profitability?&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick="answer(this,true)"&gt;Income Statement&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick="answer(this,false)"&gt;Balance Sheet&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;3. Which company had €5.3B EBIT?&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick="answer(this,true)"&gt;Airbus&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick="answer(this,false)"&gt;L'Oréal&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div id="certificate"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h1&gt;🎓 Certificate of Completion 🎓&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p&gt;Congratulations! You've completed the Finance Fundamentals Trainer.&lt;/p&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1">let progress = localStorage.getItem('progress') ? parseInt(localStorage.getItem('progress')) : 0;</p>
+<p class="p1">updateProgress();</p>
+<p class="p2"><br></p>
+<p class="p1">function showSection(id) {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.querySelectorAll('section').forEach(sec =&gt; sec.classList.add('hidden'));</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById(id).classList.remove('hidden');</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function answer(button, correct) {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if (button.classList.contains('correct') || button.classList.contains('incorrect')) return;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if (correct) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>button.classList.add('correct');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>progress += 5;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if (progress &gt;= 100) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>showCertificate();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>launchConfetti();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>button.classList.add('incorrect');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>updateProgress();</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function updateProgress() {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('progress').innerText = `Progress: ${progress}%`;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>localStorage.setItem('progress', progress);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function calculateDCF() {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const fcf = parseFloat(document.getElementById('fcf').value);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const growth = parseFloat(document.getElementById('growth').value) / 100;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const discount = parseFloat(document.getElementById('discount').value) / 100;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if (discount &lt;= growth) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('dcfResult').innerText = \"Error: Discount rate must be greater than growth rate.\";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const value = fcf / (discount - growth);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('dcfResult').innerText = `Estimated Value: €${value.toFixed(2)}M`;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function showCertificate() {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('certificate').style.display = 'block';</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function launchConfetti() {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const canvas = document.getElementById('confetti');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const ctx = canvas.getContext('2d');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>canvas.width = window.innerWidth;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>canvas.height = window.innerHeight;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const pieces = Array.from({length: 300}, () =&gt; ({</p>
+<p class="p1"><span class="Apple-converted-space">    </span>x: Math.random() * canvas.width,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>y: Math.random() * canvas.height,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>size: Math.random() * 5 + 2,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>speed: Math.random() * 3 + 2,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: `hsl(${Math.random() * 360}, 100%, 50%)`</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}));</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>function update() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>ctx.clearRect(0, 0, canvas.width, canvas.height);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>for (const p of pieces) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>ctx.beginPath();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>ctx.fillStyle = p.color;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>ctx.fill();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>p.y += p.speed;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (p.y &gt; canvas.height) p.y = 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>requestAnimationFrame(update);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>update();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>setTimeout(() =&gt; ctx.clearRect(0, 0, canvas.width, canvas.height), 5000);</p>
+<p class="p1">}</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
